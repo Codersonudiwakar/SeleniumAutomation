@@ -9,17 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Selenium Test Suite</th></tr>
-<tr><td><a href="#t0">Selenium Automation Test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">37</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Selenium Automation Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">4,373</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Selenium Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Selenium Automation Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.selenium.automation.tests.TestClass</td><td><a href="#m0">validationOfLimaUIURLs</a></td><td rowspan="1">1743615219220</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Selenium Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Selenium Automation Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.selenium.automation.tests.TestClass</td><td><a href="#m0">SampleTestCaseFirst</a></td><td rowspan="1">1743698898352</td><td rowspan="1">297</td></tr></tbody>
 </table>
-<h2>Selenium Automation Test</h2><h3 id="m0">com.selenium.automation.tests.TestClass#validationOfLimaUIURLs</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getLastRowNum()&quot; because &quot;com.selenium.automation.utils.DataReader.ExcelWSheet&quot; is null
+<h2>Selenium Automation Test</h2><h3 id="m0">com.selenium.automation.tests.TestClass#SampleTestCaseFirst</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{TestCaseName=SampleTestCaseFirst}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;test&quot; is null
+	at com.selenium.automation.utils.ScreenshotUtil.showScreenshot(ScreenshotUtil.java:28)
+	at com.selenium.automation.pages.CreateAccountPage.validateHome(CreateAccountPage.java:81)
+	at com.selenium.automation.tests.TestClass.SampleTestCaseFirst(TestClass.java:29)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at com.selenium.automation.App.main(App.java:15)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getLastRowNum()&quot; because &quot;com.selenium.automation.utils.DataReader.ExcelWSheet&quot; is null
-	at com.selenium.automation.utils.DataReader.getRowCount(DataReader.java:48)
-	at com.selenium.automation.utils.DataReader.getData(DataReader.java:76)
-	... 23 more
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

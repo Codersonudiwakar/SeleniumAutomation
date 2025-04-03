@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Selenium_Test_Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Selenium Test Suite</span>
+              <span class="suite-name border-failed">Selenium Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Selenium_Test_Suite" class="hide-methods skipped suite-Selenium_Test_Suite"> (hide)</a> <!-- hide-methods skipped suite-Selenium_Test_Suite -->
-                      <a href="#" panel-name="suite-Selenium_Test_Suite" class="show-methods skipped suite-Selenium_Test_Suite"> (show)</a> <!-- show-methods skipped suite-Selenium_Test_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Selenium_Test_Suite" class="hide-methods failed suite-Selenium_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Selenium_Test_Suite -->
+                      <a href="#" panel-name="suite-Selenium_Test_Suite" class="show-methods failed suite-Selenium_Test_Suite"> (show)</a> <!-- show-methods failed suite-Selenium_Test_Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Selenium_Test_Suite">
+                    <div class="method-list-content failed suite-Selenium_Test_Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Selenium_Test_Suite" title="com.selenium.automation.tests.TestClass" class="method navigator-link" hash-for-method="validationOfLimaUIURLs">validationOfLimaUIURLs</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Selenium_Test_Suite" title="com.selenium.automation.tests.TestClass" class="method navigator-link" hash-for-method="SampleTestCaseFirst({TestCaseName=SampleTestCaseFirst})">SampleTestCaseFirst({TestCaseName=SampleTestCaseFirst})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Selenium_Test_Suite -->
+                    </div> <!-- method-list-content failed suite-Selenium_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,30 +119,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Selenium_Test_Suite" class="panel Selenium_Test_Suite">
-          <div class="suite-Selenium_Test_Suite-class-skipped">
+          <div class="suite-Selenium_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.selenium.automation.tests.TestClass</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validationOfLimaUIURLs">
-                  </a> <!-- validationOfLimaUIURLs -->
-                  <span class="method-name">validationOfLimaUIURLs</span>
-                  <div class="stack-trace">java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getLastRowNum()&quot; because &quot;com.selenium.automation.utils.DataReader.ExcelWSheet&quot; is null
+                  <a name="SampleTestCaseFirst({TestCaseName=SampleTestCaseFirst})">
+                  </a> <!-- SampleTestCaseFirst({TestCaseName=SampleTestCaseFirst}) -->
+                  <span class="method-name">SampleTestCaseFirst</span>
+                  <span class="parameters">({TestCaseName=SampleTestCaseFirst})</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;test&quot; is null
+	at com.selenium.automation.utils.ScreenshotUtil.showScreenshot(ScreenshotUtil.java:28)
+	at com.selenium.automation.pages.CreateAccountPage.validateHome(CreateAccountPage.java:81)
+	at com.selenium.automation.tests.TestClass.SampleTestCaseFirst(TestClass.java:29)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at com.selenium.automation.App.main(App.java:15)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getLastRowNum()&quot; because &quot;com.selenium.automation.utils.DataReader.ExcelWSheet&quot; is null
-	at com.selenium.automation.utils.DataReader.getRowCount(DataReader.java:48)
-	at com.selenium.automation.utils.DataReader.getData(DataReader.java:76)
-	... 23 more
-... Removed 29 stack frames
+... Removed 24 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Selenium_Test_Suite-class-skipped -->
+          </div> <!-- suite-Selenium_Test_Suite-class-failed -->
         </div> <!-- panel Selenium_Test_Suite -->
         <div panel-name="test-xml-Selenium_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -197,14 +197,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validationOfLimaUIURLs')
+data.setCell(0, 1, 'SampleTestCaseFirst')
 data.setCell(0, 2, 'com.selenium.automation.tests.TestClass')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 297);
 window.suiteTableData['Selenium_Test_Suite']= { tableData: data, tableDiv: 'times-div-Selenium_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 297 ms</span>
               <div id="times-div-Selenium_Test_Suite">
               </div> <!-- times-div-Selenium_Test_Suite -->
             </div> <!-- times-div -->
@@ -235,9 +235,23 @@ return data;
                 <span class="method-name">setupReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">1971 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SampleTestCaseFirst({TestCaseName=SampleTestCaseFirst})</span>
+                <span class="method-start">4222 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">4521 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
-                <span class="method-name">closeReport</span>
-                <span class="method-start">477 ms</span>
+                <span class="method-name">tearDownReport</span>
+                <span class="method-start">4869 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

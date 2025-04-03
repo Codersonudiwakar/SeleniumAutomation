@@ -8,8 +8,7 @@ import com.selenium.automation.reporting.ExtentReportManager;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
-import org.openqa.selenium.WebDriver;
+import java.util.Properties;	
 
 public class BeforeSetup extends AfterSetup {
     protected Properties properties;
@@ -21,25 +20,20 @@ public class BeforeSetup extends AfterSetup {
 
     @BeforeMethod
     public void setup() throws IOException {
-        // Load properties file
         properties = new Properties();
         FileInputStream fs = null;
+        
         try {
             fs = new FileInputStream("Properties/config.properties");
             properties.load(fs);
         } catch (IOException e) {
             System.out.println("Error loading config.properties: " + e.getMessage());
-            throw e; 
+            throw e;
         } finally {
             if (fs != null) {
-                try {
-                    fs.close();
-                } catch (IOException e) {
-                    System.out.println("Error closing FileInputStream: " + e.getMessage());
-                }
+                fs.close();
             }
         }
-
 
         // Get properties
         String chromeDriverPath = properties.getProperty("chromeDriverPath");
@@ -52,20 +46,15 @@ public class BeforeSetup extends AfterSetup {
         // Set ChromeDriver path
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 
-        // Initialize ChromeOptions and WebDriver
+        // Initialize ChromeDriver and WebDriver
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("start-maximized"); 
+        options.addArguments("start-maximized");
 
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options); // Assign driver properly
         driver.manage().window().maximize();
         System.out.println("Driver initialized successfully.");
 
-        // Navigate to the test URL
-        try {
-            driver.get(testURL);
-            System.out.println("Successfully navigated to: " + testURL);
-        } catch (Exception e) {
-            System.out.println("Failed to load URL: " + e.getMessage());
-        }
+        driver.get(testURL);
+        System.out.println("Navigated to: " + testURL);
     }
 }

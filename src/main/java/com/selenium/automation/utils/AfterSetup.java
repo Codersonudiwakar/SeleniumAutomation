@@ -10,18 +10,19 @@ import com.selenium.automation.reporting.ExtentReportManager;
 
 
 public class AfterSetup {
-	public WebDriver driver;
-    public ExtentTest test;
+	protected WebDriver driver; // Declare WebDriver instance
 
     @AfterMethod
-    public void teardown() {
+    public void tearDown() {
         if (driver != null) {
             driver.quit();
+            System.out.println("Driver closed successfully.");
         }
     }
 
     @AfterSuite
-    public void closeReport() {
+    public void tearDownReport() {
         ExtentReportManager.flushReports();
     }
+
 }

@@ -5,11 +5,11 @@
     <classes>
       <class name="com.selenium.automation.tests.TestClass">
         <methods>
+          <include name="tearDownReport"/>
           <include name="setup"/>
-          <include name="closeReport"/>
+          <include name="SampleTestCaseFirst" invocation-numbers="0"/>
           <include name="setupReport"/>
-          <include name="teardown"/>
-          <include name="validationOfLimaUIURLs"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.selenium.automation.tests.TestClass -->
     </classes>
